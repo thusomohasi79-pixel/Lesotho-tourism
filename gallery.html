@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="glass">
+<header>
 <h1>Gallery</h1>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="blog.html">Blog</a>
@@ -19,24 +22,81 @@
 </nav>
 </header>
 
-<section class="gallery">
+<main>
 
-<div class="img-box">
-<img src="img1.jpg">
-<div class="overlay-text">Mountains</div>
+
+<!-- GALLERY -->
+<section class="gallery-grid">
+
+<div class="gallery-card">
+<div class="image-container">
+<img src="img4.jpg" alt="Mountains">
+
+<div class="overlay">
+<h3>Maluti Mountains</h3>
+<p>Beautiful landscapes ideal for hiking and photography.</p>
 </div>
 
-<div class="img-box">
-<img src="img2.jpg">
-<div class="overlay-text">Culture</div>
+</div>
 </div>
 
-<div class="img-box">
-<img src="img3.jpg">
-<div class="overlay-text">Adventure</div>
+<div class="gallery-card">
+<div class="image-container">
+<img src="img2.jpg" alt="Culture">
+
+<div class="overlay">
+<h3>Basotho Culture</h3>
+<p>Traditional clothing, music, and unique lifestyle.</p>
+</div>
+
+</div>
+</div>
+
+<div class="gallery-card">
+<div class="image-container">
+<img src="img3.jpg" alt="Adventure">
+
+<div class="overlay">
+<h3>Adventure</h3>
+<p>Pony trekking, mountain biking, and outdoor fun.</p>
+</div>
+
+</div>
+</div>
+
+<div class="gallery-card">
+<div class="image-container">
+<img src="img1.jpg" alt="Waterfall">
+
+<div class="overlay">
+<h3>Waterfalls</h3>
+<p>Home to the famous Maletsunyane Falls.</p>
+</div>
+
+</div>
 </div>
 
 </section>
+
+<!-- MAP -->
+<h2>📍 Location of Lesotho</h2>
+
+<iframe 
+src="https://www.google.com/maps?q=Lesotho&output=embed"
+width="80%" 
+height="300" 
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy">
+</iframe>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Visit Lesotho</p>
+</footer>
 
 </body>
 </html>

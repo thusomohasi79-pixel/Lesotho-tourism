@@ -42,7 +42,7 @@ nav a:hover {
 /* HERO */
 .hero {
     height: 100vh;
-    background: url("images/lesotho.jpg") center/cover no-repeat;
+    background: url("lesotho.jpg") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,23 +142,23 @@ body:has(#mode:checked) {
     background: black;
     color: white;
 }
-.img-box {
+nav a {
     position: relative;
 }
 
-.overlay-text {
+nav a::after {
+    content: "";
     position: absolute;
-    bottom: 0;
-    background: rgba(0,0,0,0.6);
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    opacity: 0;
+    width: 0;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: -5px;
     transition: 0.3s;
 }
 
-.img-box:hover .overlay-text {
-    opacity: 1;
+nav a:hover::after {
+    width: 100%;
 }
 /* ATTRACTIONS PAGE */
 
@@ -218,6 +218,80 @@ body:has(#mode:checked) {
 
 .info a:hover {
     background: orange;
+}
+/* SLIDESHOW */
+.slideshow {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+}
+
+.slide {
+    width: 100%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RADIO CONTROL */
+#s1:checked ~ .first { margin-left: 0; }
+#s2:checked ~ .first { margin-left: -100%; }
+#s3:checked ~ .first { margin-left: -200%; }
+
+/* NAV DOTS */
+.navigation {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation label {
+    width: 12px;
+    height: 12px;
+    background: white;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* STARS */
+.stars {
+    color: gold;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* REVIEWS */
+.reviews {
+    padding: 40px;
+    text-align: center;
+}
+
+.review-card {
+    background: rgba(255,255,255,0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.review-card h4 {
+    margin-top: 10px;
+    color: gold;
 }
 /* REVIEWS SECTION */
 .reviews {
@@ -288,7 +362,8 @@ body:has(#mode:checked) {
     .review-card {
         width: 90%;
     }
-    /* HERO */
+}
+/* HERO */
 .tips-hero {
     text-align: center;
     padding: 60px 20px;
@@ -341,10 +416,9 @@ body:has(#mode:checked) {
     margin: 40px;
     text-align: center;
 }
-}
 /* BLOG PAGE BACKGROUND */
 .blog-page {
-    background: url("img1.jpg") no-repeat center/cover;
+    background: url("img2.jpg") no-repeat center/cover;
     position: relative;
 }
 
@@ -439,7 +513,7 @@ body:has(#mode:checked) {
 }
 /* GLOBAL BACKGROUND FOR ALL PAGES */
 body {
-    background: url("img3.jpg") no-repeat center center/cover;
+    background: url("img2.jpg") no-repeat center center/cover;
     color: white;
     position: relative;
 }
@@ -457,10 +531,186 @@ body::before {
     z-index: -1;
 }
 .blog-page {
-    background: url("img1.jpg") no-repeat center/cover;
+    background: url("img2.jpg") no-repeat center/cover;
 }
 
 /* REMOVE GLOBAL BACKGROUND EFFECT */
 .blog-page::before {
     display: none;
+}
+/* ===== GALLERY GRID ===== */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ===== GALLERY CARD ===== */
+.gallery-card {
+    width: 250px;
+    border: 1px solid #ccc;
+    margin: 15px;
+    overflow: hidden;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* IMAGE */
+.gallery-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* INFO */
+.gallery-info {
+    padding: 15px;
+    text-align: center;
+}
+
+/* HOVER EFFECT (CLEAN) */
+.gallery-card:hover {
+    transform: scale(1.05);
+}
+
+/* MAP */
+iframe {
+    margin-top: 20px;
+}
+/* DETAILS BUTTON */
+details {
+    padding: 10px;
+    text-align: center;
+}
+
+/* CLICK TEXT */
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+}
+
+/* OPENED TEXT */
+details p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* ===== GALLERY GRID ===== */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ===== CARD ===== */
+.gallery-card {
+    width: 250px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* IMAGE */
+.gallery-card img {
+    width: 100%;
+}
+
+/* DETAILS */
+details {
+    margin-top: 10px;
+}
+
+summary {
+    cursor: pointer;
+    color: green;
+    font-weight: bold;
+}
+
+/* MAP */
+iframe {
+    margin-top: 20px;
+}
+
+/* ===== GALLERY GRID ===== */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* CARD */
+.gallery-card {
+    width: 260px;
+    overflow: hidden;
+}
+
+/* IMAGE CONTAINER */
+.image-container {
+    position: relative;
+}
+
+/* IMAGE */
+.image-container img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 10px;
+
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* SHOW ON HOVER */
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    margin: 30px;
+}
+
+/* MAP */
+iframe {
+    margin-top: 20px;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    /* 🌍 BACKGROUND IMAGE (ONLY CHANGE THIS FILE NAME) */
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("img2.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
